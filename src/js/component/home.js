@@ -1,24 +1,30 @@
-import React from "react";
+//import React from "react";
 
 //include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
-export function Home() {
+
+/*export function Counter(props) {
+    return (
+        <div className="crono">
+            <div className="primero">{props.one}</div>
+            <div className="tercero">{props.two}</div>
+            <div className="cuarto">{props.three}</div>
+            <div className="quinto">{props.four}</div>
+            <div className="sexto">{props.five}</div>
+            <div className="segundo">{props.one}</div>
+        </div>
+    );
+}*/
+
+import React from "react";
+import ReactDOM from "react-dom";
+import PropType from "prop-types";
+
+export const Alert = props => {
 	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div className="alert alert-danger" role="alert">
+			{props.text}
 		</div>
 	);
-}
+};
