@@ -10,10 +10,10 @@ import "bootstrap";
 import "../styles/index.scss";
 
 //import your own components
-//import { Alert } from "./component/home.js";
+import Counter from "./component/timer.jsx";
 
 //render your react application
-function Counter(props) {
+/*function Counter(props) {
 	return (
 		<div className="crono">
 			<div className="primero">{props.one} </div>
@@ -26,16 +26,16 @@ function Counter(props) {
 			<div className="sexto">{props.six % 60}</div>
 		</div>
 	);
-}
+}*/
 
-Counter.propTypes = {
+/* Counter.propTypes = {
 	one: PropTypes.number,
 	two: PropTypes.number,
 	three: PropTypes.number,
 	four: PropTypes.number,
 	five: PropTypes.number,
 	six: PropTypes.number
-};
+/* };
 
 const Alert = props => {
 	return (
@@ -60,7 +60,7 @@ setInterval(function() {
 	const six = Math.floor(segundos / 1);
 	segundos++;
 
-	if (segundos == 10) {
+	if (six == 10) {
 		ReactDOM.render(
 			<Alert text="OMG 60 seconds Already!" />,
 			document.querySelector("#app")
@@ -80,3 +80,10 @@ setInterval(function() {
 		document.querySelector("#app")
 	);
 }, 1000);
+*/
+
+ReactDOM.render(
+	<Counter />,
+
+	document.querySelector("#app")
+);
